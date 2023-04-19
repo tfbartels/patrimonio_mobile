@@ -1,14 +1,15 @@
-import 'package:http/http.dart' as http;
-import 'dart:convert';
-
-import 'partimonio_repository.dart';
+import 'partimonio_service.dart';
 import 'package:patrimonio_mobile/app/patrimonio/patrimonio_model.dart';
 
 class PatrimonioController {
 
-  PatrimonioRepository repository = PatrimonioRepository();
+  PatrimonioService service = PatrimonioService();
 
   Future<Patrimonio> getPatrimonioByCodigo(String codigo) async {
-    return repository.getPatrimonioByCodigo(codigo);
+    return service.getPatrimonioByCodigo(codigo);
+  }
+
+  Future<void> updatePatrimonio(Patrimonio patrimonio) async {
+    service.updatePatrimonio(patrimonio);
   }
 }

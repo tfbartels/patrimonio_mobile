@@ -46,9 +46,9 @@ class _BuscaPatrimonioViewState extends State<BuscaPatrimonioView> {
                         fontSize: 17, 
                         fontWeight: FontWeight.bold)
                     ),
-                    onPressed: () async{
-                      patrimonio = await patrimonioController.getPatrimonioByCodigo(codigo);
-                      Navigator.of(context).pop(patrimonio);
+                    onPressed: () async{                      
+                        patrimonio = await patrimonioController.getPatrimonioByCodigo(codigo);
+                        Navigator.of(context).pop(patrimonio);
                     },
                 ),
               )
